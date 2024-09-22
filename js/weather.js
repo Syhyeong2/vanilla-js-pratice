@@ -27,9 +27,7 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${Math.floor(
-        data.main.temp
-      )} °C`;
+      weather.innerText = `${Math.floor(data.main.temp)} °C`;
       weatherImg.setAttribute(
         "src",
         `img/${weatherType[data.weather[0].main]}.svg`
