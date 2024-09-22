@@ -7,6 +7,7 @@ function getClock() {
   const hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   clock.innerText = `${month}월 ${day}일\n${hours}시 ${minutes}분`;
+  console.log("1");
 }
 
 getClock();
